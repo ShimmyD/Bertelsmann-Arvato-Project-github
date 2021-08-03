@@ -37,7 +37,7 @@ our model. Then outputs whether or not this person is a potential customer for t
 
 ![image info](./home.JPG)\
 
-![image info](./classification result.JPG)\
+![image info](./"classification result.JPG")\
 
 ## Installation
 1. Create virtual environment with command 'py -m venv enviro_name', activate virtual environment  'enviro_name\scripts\activate.bat'
