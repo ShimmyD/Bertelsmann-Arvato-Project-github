@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Disasters</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Bertelsmann/Arvato Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://www.udacity.com/">Made with Udacity</a></li>
+                <li><a href="https://github.com/ShimmyD/">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Bertelsmann/Arvato Project </h1>
+        <p class="text-center">Input customer demographics for customer prediction</p>
+        <hr />
+        <form action="/go" method="get">
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label >AGER_TYP_nan</label>
+                <select name="AGER_TYP" class="selectpicker show-menu-arrow form-control">
+                  <option value=0>0</option>
+                  <option value =1>1</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputCJT_GESAMTTYP">CJT_GESAMTTYP_1</label>
+                <select name="CJT_GESAMTTYP" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputD19_BANKEN_DIREKT">D19_BANKEN_DIREKT_5</label>
+                <select name="D19_BANKEN_DIREKT" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputD19_BANKEN_OFFLINE_DATUM ">D19_BANKEN_OFFLINE_DATUM </label>
+                <select name="D19_BANKEN_OFFLINE_DATUM " class="selectpicker show-menu-arrow form-control">
+                  <option value=1>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                  <option value=6>6</option>
+                  <option value=7>7</option>
+                  <option value=8>8</option>
+                  <option value=9>9</option>
+                  <option value=10>10</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputD19_LEBENSMITTEL">D19_LEBENSMITTEL_7</label>
+                <select name="D19_LEBENSMITTEL" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputD19_LOTTO">D19_LOTTO_7</label>
+                <select name="D19_LOTTO" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                </select>
+              </div>
+            </div> 
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="inputD19_SOZIALES">D19_SOZIALES_1</label>
+                  <select name="D19_SOZIALES" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputD19_TIERARTIKEL">D19_TIERARTIKEL_0</label>
+                  <select name="D19_TIERARTIKEL" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputFINANZ_HAUSBAUER">FINANZ_HAUSBAUER</label>
+                  <select name="FINANZ_HAUSBAUER" class="selectpicker show-menu-arrow form-control">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputGEBURTSJAHR">GEBURTSJAHR</label>
+                    <input type="GEBURTSJAHR" class="form-control form-control-lg"  name="GEBURTSJAHR" placeholder="GEBURTSJAHR">    
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputGFK_URLAUBERTYP">GFK_URLAUBERTYP_2</label>
+                  <select name="GFK_URLAUBERTYP" class="selectpicker show-menu-arrow form-control">
+                    option value=0>0</option>
+                    <option value =1>1</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputKBA05_ANHANG ">KBA05_ANHANG</label>
+                  <select name="KBA05_ANHANG " class="selectpicker show-menu-arrow form-control">
+                      <option value=0>0</option>
+                      <option value =1>1</option>
+                      <option value =2>2</option>
+                      <option value =3>3</option>
+                  </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="inputKBA05_DIESEL">KBA05_DIESEL</label>
+                  <select name="KBA05_DIESEL" class="selectpicker show-menu-arrow form-control">
+                    <option value=1>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option value =5>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputKBA05_MAXHERST">KBA05_MAXHERST_nan</label>
+                  <select name="KBA05_MAXHERST" class="selectpicker show-menu-arrow form-control">
+                    <option value=1>1</option>
+                    <option value=0>0</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-1">
+                  <label for="inputKBA05_SEG2">KBA05_SEG2</label>
+                  <select name="KBA05_SEG2" class="selectpicker show-menu-arrow form-control">
+                    <option value =1>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option value =5>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputKBA05_VORB0">KBA05_VORB0</label>
+                  <select name="KBA05_VORB0" class="selectpicker show-menu-arrow form-control">
+                    <option value =1>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="inputKBA13_KRSHERST_FORD_OPEL">KBA13_KRSHERST_FORD_OPEL</label>
+                  <select name="KBA13_KRSHERST_FORD_OPEL" class="selectpicker show-menu-arrow form-control">
+                      <option value=0>0</option>
+                      <option value =1>1</option>
+                      <option value =2>2</option>
+                      <option value =3>3</option>
+                      <option value =4>4</option>
+                      <option value =5>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputKBA13_SEG_GELAENDEWAGEN">KBA13_SEG_GELAENDEWAGEN </label>
+                  <select name="KBA13_SEG_GELAENDEWAGEN" class="selectpicker show-menu-arrow form-control">
+                    <option value =2>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option value =5>5</option>
+                  </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="inputKBA13_SEG_VAN">KBA13_SEG_VAN</label>
+                  <select name="KBA13_SEG_VAN" class="selectpicker show-menu-arrow form-control">
+                    <option value =1>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option value =5>5</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="inputPRAEGENDE_JUGENDJAHRE">PRAEGENDE_JUGENDJAHRE_7</label>
+                  <select name="PRAEGENDE_JUGENDJAHRE" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-1">
+                  <label for="inputWOHNLAGE">WOHNLAGE</label>
+                  <select name="WOHNLAGE" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value =1>1</option>
+                    <option value =2>2</option>
+                    <option value =3>3</option>
+                    <option value =4>4</option>
+                    <option value =5>5</option>
+                    <option value =6>6</option>
+                    <option value =7>7</option>
+                    <option value =8>8</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputD19_TECHNIK">D19_TECHNIK_0</label>
+                  <select name="D19_TECHNIK" class="selectpicker show-menu-arrow form-control">
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                  </select>
+                </div> 
+                <div class="form-group col-md-2">
+                    <label for="inputGFK_URLAUBERTYP">GFK_URLAUBERTYP_3</label>
+                    <select name="GFK_URLAUBERTYP_3" class="selectpicker show-menu-arrow form-control">
+                      <option value=0>0</option>
+                      <option value=1>1</option>
+                    </select>
+                  </div>      
+            </div>
+         
+            <div class="col-lg-offset-5">
+                <button type="submit" class="btn btn-lg btn-success">Classify input</button>
+            </div>
+          </form>
+    </div>
+</div>
+
+<div class="container">
+    {% block message %}
+        <div class="page-header">
+            <h1 class="text-center">Overview of Training Dataset</h1>
+        </div>
+   
+    <div class="row mb-6">
+      {% for id in ids %}
+        <div class="col-md-6">
+            <div id="{{id}}"></div>
+        </div>
+      {% endfor %} 
+    </div>
+</div>
+{% endblock message %}
+
+<script type="text/javascript">
+    const graphs = {{graphJSON | safe}};
+    const ids = {{ids | safe}};
+    for(let i in graphs) {
+        Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+    }
+</script>
+
+
+</body>
+</html>
