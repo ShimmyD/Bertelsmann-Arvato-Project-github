@@ -24,9 +24,9 @@ a real-life data science task.
 ### Project structure
 1. Data explorartory
 2. Customer Segmentation
-  1 Data pre-processing
-  2 Dimensionality reduction
-  3 Clustering
+  1. Data pre-processing
+  2. Dimensionality reduction
+  3. Clustering
 3. Build supervised ML
 4. Kaggle submission 
 
