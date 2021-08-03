@@ -31,7 +31,8 @@
 
 
 <div class="jumbotron">
-    <div class="container">
+  {% block content %}
+    <div class="container-md">
         <h1 class="text-center">Bertelsmann/Arvato Project </h1>
         <p class="text-center">Input customer demographics for customer prediction</p>
         <hr />
@@ -40,6 +41,7 @@
               <div class="form-group col-md-2">
                 <label >AGER_TYP_nan</label>
                 <select name="AGER_TYP" class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                   <option value=0>0</option>
                   <option value =1>1</option>
                 </select>
@@ -47,6 +49,7 @@
               <div class="form-group col-md-2">
                 <label for="inputCJT_GESAMTTYP">CJT_GESAMTTYP_1</label>
                 <select name="CJT_GESAMTTYP" class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                 </select>
@@ -54,6 +57,7 @@
               <div class="form-group col-md-2">
                 <label for="inputD19_BANKEN_DIREKT">D19_BANKEN_DIREKT_5</label>
                 <select name="D19_BANKEN_DIREKT" class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                 </select>
@@ -61,6 +65,7 @@
               <div class="form-group col-md-2">
                 <label for="inputD19_BANKEN_OFFLINE_DATUM ">D19_BANKEN_OFFLINE_DATUM </label>
                 <select name="D19_BANKEN_OFFLINE_DATUM " class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                   <option value=1>1</option>
                   <option value=2>2</option>
                   <option value=3>3</option>
@@ -76,6 +81,7 @@
               <div class="form-group col-md-2">
                 <label for="inputD19_LEBENSMITTEL">D19_LEBENSMITTEL_7</label>
                 <select name="D19_LEBENSMITTEL" class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                 </select>
@@ -83,6 +89,7 @@
               <div class="form-group col-md-2">
                 <label for="inputD19_LOTTO">D19_LOTTO_7</label>
                 <select name="D19_LOTTO" class="selectpicker show-menu-arrow form-control">
+                  <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                 </select>
@@ -92,6 +99,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputD19_SOZIALES">D19_SOZIALES_1</label>
                   <select name="D19_SOZIALES" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                   </select>
@@ -99,6 +107,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputD19_TIERARTIKEL">D19_TIERARTIKEL_0</label>
                   <select name="D19_TIERARTIKEL" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                   </select>
@@ -106,6 +115,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputFINANZ_HAUSBAUER">FINANZ_HAUSBAUER</label>
                   <select name="FINANZ_HAUSBAUER" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=1>1</option>
                     <option value=2>2</option>
                     <option value=3>3</option>
@@ -120,13 +130,15 @@
                 <div class="form-group col-md-2">
                   <label for="inputGFK_URLAUBERTYP">GFK_URLAUBERTYP_2</label>
                   <select name="GFK_URLAUBERTYP" class="selectpicker show-menu-arrow form-control">
-                    option value=0>0</option>
+                    <option selected>Choose...</option>
+                    <option value=0>0</option>
                     <option value =1>1</option>
                   </select>
                 </div>
                 <div class="form-group col-md-2">
                   <label for="inputKBA05_ANHANG ">KBA05_ANHANG</label>
                   <select name="KBA05_ANHANG " class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                       <option value=0>0</option>
                       <option value =1>1</option>
                       <option value =2>2</option>
@@ -138,6 +150,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputKBA05_DIESEL">KBA05_DIESEL</label>
                   <select name="KBA05_DIESEL" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=1>1</option>
                     <option value =2>2</option>
                     <option value =3>3</option>
@@ -148,6 +161,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputKBA05_MAXHERST">KBA05_MAXHERST_nan</label>
                   <select name="KBA05_MAXHERST" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=1>1</option>
                     <option value=0>0</option>
                   </select>
@@ -155,6 +169,7 @@
                 <div class="form-group col-md-1">
                   <label for="inputKBA05_SEG2">KBA05_SEG2</label>
                   <select name="KBA05_SEG2" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value =1>1</option>
                     <option value =2>2</option>
                     <option value =3>3</option>
@@ -165,6 +180,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputKBA05_VORB0">KBA05_VORB0</label>
                   <select name="KBA05_VORB0" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value =1>1</option>
                     <option value =2>2</option>
                     <option value =3>3</option>
@@ -175,6 +191,7 @@
                 <div class="form-group col-md-3">
                   <label for="inputKBA13_KRSHERST_FORD_OPEL">KBA13_KRSHERST_FORD_OPEL</label>
                   <select name="KBA13_KRSHERST_FORD_OPEL" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                       <option value=0>0</option>
                       <option value =1>1</option>
                       <option value =2>2</option>
@@ -186,6 +203,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputKBA13_SEG_GELAENDEWAGEN">KBA13_SEG_GELAENDEWAGEN </label>
                   <select name="KBA13_SEG_GELAENDEWAGEN" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value =2>1</option>
                     <option value =2>2</option>
                     <option value =3>3</option>
@@ -198,6 +216,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputKBA13_SEG_VAN">KBA13_SEG_VAN</label>
                   <select name="KBA13_SEG_VAN" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value =1>1</option>
                     <option value =2>2</option>
                     <option value =3>3</option>
@@ -208,6 +227,7 @@
                 <div class="form-group col-md-3">
                   <label for="inputPRAEGENDE_JUGENDJAHRE">PRAEGENDE_JUGENDJAHRE_7</label>
                   <select name="PRAEGENDE_JUGENDJAHRE" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                   </select>
@@ -215,6 +235,7 @@
                 <div class="form-group col-md-1">
                   <label for="inputWOHNLAGE">WOHNLAGE</label>
                   <select name="WOHNLAGE" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value =1>1</option>
                     <option value =2>2</option>
@@ -229,6 +250,7 @@
                 <div class="form-group col-md-2">
                   <label for="inputD19_TECHNIK">D19_TECHNIK_0</label>
                   <select name="D19_TECHNIK" class="selectpicker show-menu-arrow form-control">
+                    <option selected>Choose...</option>
                     <option value=0>0</option>
                     <option value=1>1</option>
                   </select>
@@ -247,6 +269,7 @@
             </div>
           </form>
     </div>
+    {% endblock content %}
 </div>
 
 <div class="container">
