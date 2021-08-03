@@ -24,9 +24,9 @@ a real-life data science task.
 ### Project structure
 1. Data explorartory
 2. Customer Segmentation
-  1.1 Data pre-processing
-  1.2 Dimensionality reduction
-  1.3 Clustering
+  2.1 Data pre-processing
+  2.2 Dimensionality reduction
+  2.3 Clustering
 3. Build supervised ML
 4. Kaggle submission 
 
@@ -42,7 +42,7 @@ Output prediction result
 ![image info](./classification_result.JPG)\
 
 ## Installation
-1. Create virtual environment with command 'py -m venv enviro_name', activate virtual environment  'enviro_name\scripts\activate.bat'
+1. Create virtual environment with command ```py -m venv enviro_name```, activate virtual environment  'enviro_name\scripts\activate.bat'
 2. Download requirements.txt and install all libraries required to run this web application on local server with command 'pip install -r requirements.txt'
 3. Download data and templates folders and app.py.
 4. Run the following command in the directory where app.py is in to run your web app.`python app.py`
