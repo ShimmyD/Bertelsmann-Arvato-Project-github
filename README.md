@@ -34,6 +34,8 @@ a real-life data science task.
 A web application is built to predict company's potential customer with our trained supervised ML. Python library flask is used for back end work and bootstrap library
 is used for front end work. The trained model takes 24 individual demographics inputs as model attributes, as these 24 demographics info are the most weighted features evaluated by
 our model. Then outputs whether or not this person is a potential customer for the company.
+![image info](./home.JPG)\
+![image info](./classification_result.JPG)\
 
 ## Installation
 1. Create virtual environment with command 'py -m venv enviro_name', activate virtual environment  'enviro_name\scripts\activate.bat'
