@@ -1,5 +1,7 @@
 # Bertelsmann/Arvato Project
 
+A full detailed project write-up is provided in the [Arvato project workbook](https://github.com/ShimmyD/Bertelsmann-Arvato-Project-github/blob/master/Arvato%20Project%20Workbook-github.ipynb)
+
 ### Table of content
 1. Introduction
 2. Description
